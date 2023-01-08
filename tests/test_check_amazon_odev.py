@@ -24,6 +24,7 @@ class TestCheckAmazonOdev(BaseTest):
     search_keyword = 'SAMSUNG'
     login_user_name = 'Hello, yunus'
     website_name = 'Amazon'
+    page_name = 'Current page, page 2'
     page_index = 0
     product_index = 2
 
@@ -46,6 +47,7 @@ class TestCheckAmazonOdev(BaseTest):
 
         search_page = SearchPage(self.driver)
         search_page.click_2_page(self.page_index)
+        self.assertEqual(self.page_name, search_page.page_count())
 
         product_page = ProductPage(self.driver)
         product_page.click_3_product(self.product_index)
