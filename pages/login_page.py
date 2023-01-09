@@ -19,5 +19,8 @@ class LoginPage(BasePage):
     def click_signin_btn(self):
         self.click_element(*self.SIGNIN_BUTTON)
 
-    def continue_btn(self):
+    def continue_step_btn(self):
         self.click_element(*self.CONTINUE_BUTTON)
+
+    def login_user(self):
+        return self.find_element(*self.LOGIN_USER).text
