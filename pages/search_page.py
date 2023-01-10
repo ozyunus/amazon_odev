@@ -14,5 +14,5 @@ class SearchPage(BasePage):
     def click_pagination_button(self, index):
         self.find_elements(index, *self.GO_TO_PAGE)
 
-    def page_count(self):
+    def get_page_count(self):
         return self.find_element(*self.PAGE_COUNT).get_attribute('aria-label')

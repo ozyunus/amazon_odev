@@ -44,7 +44,7 @@ class TestCheckAmazonOdev(BaseTest):
         search_page = SearchPage(self.driver)
         self.assertIn(self.search_keyword, search_page.search_return(), 'Samsung searched')
         search_page.click_pagination_button(self.page_index)
-        self.assertEqual(self.page_name, search_page.page_count(), 'On the expected page')
+        self.assertEqual(self.page_name, search_page.get_page_count(), 'On the expected page')
 
         product_page = ProductPage(self.driver)
         product_page.click_product(self.product_index)
